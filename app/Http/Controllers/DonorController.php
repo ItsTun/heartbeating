@@ -29,6 +29,7 @@ class DonorController extends Controller
     public function index()
     {    
         $donors=Donor::with('bloodtype','township')->get();
+        
        
 
 
@@ -66,6 +67,7 @@ class DonorController extends Controller
     public function store(Request $request)
     {
         //
+
      
 
        
@@ -114,10 +116,14 @@ class DonorController extends Controller
         $donors->phRd=$request->phRd;
 
 
-
-
-
         $donors->save();
+
+      
+
+
+
+
+        
 
 
 
@@ -133,6 +139,8 @@ class DonorController extends Controller
     public function show($id)
     {   
         $donors=Donor::find($id);
+
+       
 
         
         return view('donor.donorshow')->withDonors($donors);

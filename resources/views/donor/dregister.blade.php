@@ -22,7 +22,7 @@
 
                               
                               @endif
-                              {!! Form::open(['route'=>'donor.store']) !!}
+                              {!! Form::open(['route'=>'donor.index']) !!}
                                    <div class="row">
                                             <div class="col-md-5 col-md-offset-1">
                                                 <div class="form-group">

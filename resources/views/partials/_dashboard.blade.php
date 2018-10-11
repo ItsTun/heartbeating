@@ -23,7 +23,7 @@
                     <div>
                         <ul class="nav">
                             <li>
-                                <a href="{{route('fdonor.create')}}">
+                                <a href="{{route('fdonor.create')}}"
                                     <span class="sidebar-mini">SM</span>
                                     <span class="sidebar-normal">Search Member !</span>
                                 </a>

@@ -18,7 +18,7 @@ class BloodController extends Controller
      */
     public function index()
     {
-        //
+       
     }
 
 
@@ -44,69 +44,8 @@ class BloodController extends Controller
     public function store(Request $request)
     {     
                   
-         // $input  = '11/06/1990';
-         // $format = 'Y/m/d';
-
-         // $date = Carbon::createFromFormat($format, $input);
-         // dd($date);
-         $checkDate=Carbon::now()->subMonths(4);
-         
-
-
-
-        
-       if ($request->town==null) {
-           # code...
-        
-                                      // $users = DB::table('donors')->select('donorID','donroName', 'address', 'township_id','bloodytype_id','phNo')
-                                     
-                                      // ->where('bloodytype_id', '=', $request->type)
-                                     
-                                      // ->get();
-
-
-
-                                      $users=Donor::with('bloodtype','township')
-                                        ->where('bloodytype_id', '=', $request->type)
-                                        ->get();
-
-
-                                      
-
-                                      
-       }
-
-       else
-       {
-
-
-        // $users = DB::table('donors')->select('donorID','donroName', 'address', 'township_id','bloodytype_id','phNo')
-        //                               ->where('date','<=', $checkDate )
-        //                               ->where('bloodytype_id', '=', $request->type)
-        //                                ->where('township_id','=',$request->town)
-        //                               ->get();
-
-
-
-
-                                      $users=Donor::with('bloodtype','township')
-                                        ->where('date','<=', $checkDate )
-                                         ->where('bloodytype_id', '=', $request->type)
-                                        ->where('township_id','=',$request->town)
-                                        
-                                        ->get();
-        
-
-       }
-
-       
-        
-
-       
-         
-             
-       
-          return view('blood.showblood')->withDonors($users); 
+                 
+     
 
 
 
